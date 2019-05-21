@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Iuw-19-aXi">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notes View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="NotesViewController" id="BYZ-38-t0r" userLabel="Notes View Controller" customClass="NotesViewController" customModule="NotesForEvo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JJN-Zl-flJ">
+                                <rect key="frame" x="0.0" y="144" width="414" height="718"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="fkD-EL-OtS"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="3r1-Qp-Hq5"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RkM-So-IAx">
+                                <rect key="frame" x="0.0" y="88" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="F8h-B2-Htu"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="JJN-Zl-flJ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="D4n-a0-jS0"/>
+                            <constraint firstItem="JJN-Zl-flJ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DQP-Yf-c43"/>
+                            <constraint firstItem="JJN-Zl-flJ" firstAttribute="top" secondItem="RkM-So-IAx" secondAttribute="bottom" id="GNx-4d-0cE"/>
+                            <constraint firstItem="RkM-So-IAx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MLF-xK-tcj"/>
+                            <constraint firstItem="RkM-So-IAx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="PRF-ir-5Dg"/>
+                            <constraint firstItem="RkM-So-IAx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Piy-76-bEC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JJN-Zl-flJ" secondAttribute="trailing" id="iEa-Xl-Yj0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gtM-NB-vut">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="Yyq-R5-Uuv">
+                                <connections>
+                                    <action selector="addAction:" destination="BYZ-38-t0r" id="nuI-px-IJb"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem image="sort" id="2jf-2P-3qE">
+                                <inset key="imageInsets" minX="0.0" minY="1" maxX="0.0" maxY="0.0"/>
+                                <connections>
+                                    <action selector="sortAction:" destination="BYZ-38-t0r" id="dwP-eC-clJ"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="JJN-Zl-flJ" id="lkF-ke-AUd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="722" y="100"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PRE-CG-bel">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Iuw-19-aXi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ZEa-mW-hjl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="2RF-lE-vW3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fXW-vc-W3L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="100"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sort" width="24" height="24"/>
+    </resources>
+</document>

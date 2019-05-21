@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8A4-5l-bCa">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--NoteDetailsViewController-->
+        <scene sceneID="SPz-AJ-Ac3">
+            <objects>
+                <viewController storyboardIdentifier="NoteDetailsViewController" id="enl-rN-Zww" userLabel="NoteDetailsViewController" customClass="NoteDetailsViewController" customModule="NotesForEvo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nwk-iE-awA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="kyS-le-abt">
+                                <rect key="frame" x="16" y="104" width="382" height="774"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="enl-rN-Zww" id="o74-IE-5bx"/>
+                                </connections>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kyS-le-abt" firstAttribute="bottom" secondItem="c5n-q1-vw6" secondAttribute="bottom" constant="16" id="1fg-6S-4nh"/>
+                            <constraint firstAttribute="trailing" secondItem="kyS-le-abt" secondAttribute="trailing" constant="16" id="Qnr-rM-45p"/>
+                            <constraint firstItem="kyS-le-abt" firstAttribute="leading" secondItem="Nwk-iE-awA" secondAttribute="leading" constant="16" id="cwO-1b-vOV"/>
+                            <constraint firstItem="kyS-le-abt" firstAttribute="top" secondItem="c5n-q1-vw6" secondAttribute="top" constant="16" id="vNH-br-YNV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="c5n-q1-vw6"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="s2d-3N-7ix">
+                        <rightBarButtonItems>
+                            <barButtonItem title="Save" id="710-FE-Rcc">
+                                <connections>
+                                    <action selector="saveAction:" destination="enl-rN-Zww" id="PcF-FH-lxt"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="action" id="dUv-U2-Q52">
+                                <connections>
+                                    <action selector="shareAction:" destination="enl-rN-Zww" id="Lb1-FM-jGL"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="saveButton" destination="710-FE-Rcc" id="T2n-uk-9wP"/>
+                        <outlet property="shareButton" destination="dUv-U2-Q52" id="IjZ-S8-HaJ"/>
+                        <outlet property="textView" destination="kyS-le-abt" id="cZ5-me-dNo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ghE-BQ-Rmg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2662.3188405797105" y="99.776785714285708"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AW2-SF-wuF">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8A4-5l-bCa" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Z8i-JJ-Iwo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="enl-rN-Zww" kind="relationship" relationship="rootViewController" id="QsY-mf-7vl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="te8-tr-GvW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1753.6231884057972" y="99.776785714285708"/>
+        </scene>
+    </scenes>
+</document>

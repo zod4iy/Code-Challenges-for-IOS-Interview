@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NotesForEvo/Controllers/Notes/NotesViewController.swift"
+            timestampString = "580108541.4488519"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
+            landmarkName = "buildRequest(for:sortByDateAscending:fetchLimit:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NotesForEvo/Controllers/Notes/NotesViewController.swift"
+            timestampString = "580108541.448929"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "98"
+            endingLineNumber = "98"
+            landmarkName = "buildFetchResultController(with:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NotesForEvo.NotesViewController.(buildFetchResultController in _88157A15273A82556E44F6F84F196809)(with: __C.NSFetchRequest&lt;NotesForEvo.NoteMO&gt;) -&gt; ()"
+                  moduleName = "NotesForEvo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyralesov/Downloads/NotesForEvo-For-EK/NotesForEvo/Controllers/Notes/NotesViewController.swift"
+                  timestampString = "579924888.865397"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "1012">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "NotesForEvo.NotesViewController.(buildFetchResultController in _88157A15273A82556E44F6F84F196809)(with: __C.NSFetchRequest&lt;NotesForEvo.NoteMO&gt;) -&gt; ()"
+                  moduleName = "NotesForEvo"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kyralesov/Downloads/NotesForEvo-For-EK/NotesForEvo/Controllers/Notes/NotesViewController.swift"
+                  timestampString = "579924888.868367"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "85"
+                  endingLineNumber = "85"
+                  offsetFromSymbolStart = "1084">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
